@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main {
+  background: rgb(255, 212, 212);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.error {
+  color: #FF7070;
+;
+  font-size: 14px;
+  margin-top: 4px;
+  display: block;
+}
+.listSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.listContainer {
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+
+.listContainer ul {
+  list-style-type: none;
+}
+
+.FormContainer {
+  background: pink;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Adjust as needed for minimal border radius */
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
