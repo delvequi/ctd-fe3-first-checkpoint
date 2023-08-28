@@ -45,9 +45,16 @@ code {
 }
 
 .FormContainer {
-  background: pink;
+  background: #221515;
   border: 1px solid #ccc;
   border-radius: 4px; /* Adjust as needed for minimal border radius */
   padding: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
 }

@@ -11,64 +11,62 @@ function App() {
 
   const handleColorSubmit = (event) => {
     event.preventDefault();
-  
-    setColorNameError('');
-    setColorHexaError('');
 
     if (colorName.trim() === '' || colorHexa.trim() === '') {
-      setColorNameError('A cor e o nome são obrigatórios.');
+      setColorNameError('O nome e o código da cor são obrigatórios.');
       return;
     }
-  
+
     if (colorName.startsWith(' ')) {
-      setColorNameError("A cor não deve começar com um espaço");
+      setColorNameError('O nome da cor não deve começar com um espaço.');
       return;
     }
 
     if (colorName.trim().length < 3) {
-      setColorNameError('O nome da cor deve ter ao menos 3 caracteres.');
+      setColorNameError('O nome da cor deve ter pelo menos 3 caracteres.');
       return;
     }
 
     if (colorHexa.trim().length < 7) {
-      setColorNameError('O código da cor deve ter ao menos 7 caracteres contando com #.');
+      setColorHexaError('O código da cor deve ter pelo menos 7 caracteres contando com #.');
       return;
     }
-  
+
     const newColor = { name: colorName, hexa: colorHexa, isAdded: false };
     setColorList((oldColorList) => [...oldColorList, newColor]);
     setColorName('');
     setColorHexa('');
   };
-  
 
   return (
     <main className="main">
       <form className="FormContainer" onSubmit={handleColorSubmit}>
-        <h3>Add uma cor na lista</h3>
+        <h3>Adicione uma cor à lista</h3>
+        <p>Nome</p>
         <input
           type="text"
           name="colorName"
           id="colorName"
-          placeholder="Type the color name"
+          placeholder="Digite o nome da cor"
           onChange={(event) => setColorName(event.target.value)}
           value={colorName}
         />
-               {colorNameError && <span className="error">{colorNameError}</span>}
+        <span className="error">{colorNameError}</span>
 
+        <p>Cor</p>
         <input
           type="text"
           name="colorHexa"
           id="colorHexa"
-          placeholder="Type the color in hexadecimal"
+          placeholder="Digite o código da cor em hexadecimal"
           onChange={(event) => setColorHexa(event.target.value)}
           value={colorHexa}
         />
-               {colorHexaError && <span className="error">{colorHexaError}</span>}
+        <span className="error">{colorHexaError}</span>
 
-               <button type="submit" disabled={!colorName || !colorHexa}>
-    Add
-  </button>
+        <button type="submit" disabled={!colorName || !colorHexa}>
+          Adicionar
+        </button>
       </form>
       <section className="listSection">
         <h3>Minha lista de cores</h3>
