@@ -198,7 +198,7 @@ function App() {
           <li key={index} className="color-item">
             <div
                className="color-card-container" style={{border: `6px solid ${color.hexa + '50'}`, 
-               height: '8.0605rem', width: '19.09rem', borderRadius: '0.375rem',
+               height: '8.0605rem', width: '19.09rem', borderRadius: '0.375rem', marginBottom: '2rem',
                     }}>            
               <div
                 className="color-card"

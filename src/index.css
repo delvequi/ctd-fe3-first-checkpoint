@@ -36,6 +36,7 @@ input#colorHexa.error {
   border: 1px solid #FF7070;
   background: #221515;
 }
+
 .listSection {
   display: flex;
   flex-direction: column;
@@ -45,19 +46,40 @@ input#colorHexa.error {
 }
 
 .listContainer {
+  width: 100%;
   display: flex;
   gap: 2rem;
   text-align: center;
+  height: 10%;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .listContainer ul {
   list-style-type: none;
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.listContainer ul.color-list {
+
+  flex-wrap: wrap;
+  width: 49%;
+}
+
+.listContainer ul.color-list .color-item {
+  margin: 1rem;
+
 }
 
 
 
 p {
-  margin: 0;
+  margin: 1rem 0 1rem 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   color: #FFFFFF;
